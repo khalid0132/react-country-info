@@ -1,0 +1,6 @@
+.country-design{
+    /* display:grid;
+    grid-template-columns: repeat(3, 1fr); */
+    border: 1px solid gray;
+    box-shadow: 5px 5px 10px gray;
+}
