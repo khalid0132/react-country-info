@@ -8,7 +8,7 @@ const CountryDetail = () => {
         fetch(`https://restcountries.eu/rest/v2/name/${countryName}`)
         .then(res => res.json())
         .then(data => setCountry(data[0]))
-    },[])
+    },[countryName])
     const {capital, population} = country;
     return (
         <div>
