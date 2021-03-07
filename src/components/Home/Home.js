@@ -9,7 +9,7 @@ const Home = () => {
         fetch(url)
         .then(res => res.json())
         .then(data => setCountries(data))
-    })
+    },[])
     return (
         <div>
             <h1>Number of Countries:  {countries.length}</h1>
