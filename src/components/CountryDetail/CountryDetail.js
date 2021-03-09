@@ -7,7 +7,10 @@ const CountryDetail = () => {
     useEffect(()=>{
         fetch(`https://restcountries.eu/rest/v2/name/${countryName}`)
         .then(res => res.json())
-        .then(data => setCountry(data[0]))
+        .then(data => {
+            setCountry(data[0])
+            console.log(data[0])
+        })
     },[countryName])
     const {capital, population} = country;
     return (
@@ -15,6 +18,10 @@ const CountryDetail = () => {
             <h1>Country Detail: {countryName}</h1>
             <p>Capital: {capital}</p>
             <p>Population: {population}</p>
+            <p>Lang: {country.languages && country.languages[0].name}</p>
+            {/* <p>Lang: {country.languages[0]?.name}</p> */}
+            <p>Currencies: {country.currencies && country.currencies[0].name} ({country.currencies && country.currencies[0].symbol}) </p>
+
         </div>
     );
 };

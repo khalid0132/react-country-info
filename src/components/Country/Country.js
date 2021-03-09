@@ -3,6 +3,7 @@ import { Link, useHistory } from 'react-router-dom';
 import './Country.css';
 
 const Country = ({country}) => {
+    console.log({country})
     const {name, capital, population, flag} = country;
     let history = useHistory();
     const handleClick =(countryName)=>{
